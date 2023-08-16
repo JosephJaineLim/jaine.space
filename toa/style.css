@@ -1,10 +1,16 @@
+:root{
+    --color-1: #0f0f0f;
+    --color-2: #efece6;
+    --font-1: 'Lato', sans-serif;
+    --font-2: 'Roboto', sans-serif;
+}
+
 body{
     margin: 0;
     padding: 0;
 
-    font-family: 'Lato', sans-serif;
-    background-color: #0f0f0f;
-    color: #efece6;
+    background-color: var(--color-1);
+    color: var(--color-2);
 }
 .app{
     display: flex;
@@ -21,6 +27,7 @@ body{
     justify-content: center;
 }
 .app__header h1{
+    font-family: var(--font-1);
     font-size: 9rem;
 } 
 .app__content{
@@ -31,7 +38,7 @@ body{
 .timeline-dot{
     width: 7px;
     height: 7px;
-    background-color: #efece6;
+    background-color: var(--color-2);
     border-radius: 50%;
     position: absolute; 
     left: calc(50% - 3.5px);
@@ -39,7 +46,7 @@ body{
 .timeline-line{
     width: 3px;
     height: 4650px;
-    background-color: #efece6;
+    background-color: var(--color-2);
     
     position: absolute;
     top: 50px;
@@ -48,11 +55,9 @@ body{
 
 #person{
     width: 40px;
-
     position: fixed;
     top: 300px;
     left: calc(50% - 20px);
-
     z-index: 1;
 }
 
@@ -61,7 +66,6 @@ body{
     visibility: hidden;
     width: 40%;
     height: 150px;
-
 
     display: flex;
     flex-direction: column;
@@ -103,11 +107,12 @@ body{
 .frame-content h1{
     margin: 0;
     padding: 0;
-    color: #efece6;
+    color: var(--color-2);
     
     font-size: 5rem;
+    font-family: var(--font-1);
     -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: var(--color-1);
 }
 .frame-footer{
     height: 50px;
@@ -115,7 +120,7 @@ body{
     text-align: center;
 }
 .frame-footer p{
-    font-family: 'Roboto';
+    font-family: var(--font-2);
     margin: 0;
 }
 .appear-animation{
@@ -142,12 +147,12 @@ body{
 
 .app__footer p{
     margin: 0;
-    font-family: Roboto;
+    font-family: var(--font-2);
 }
 
 .app__footer a{
-    font-family: Roboto;
-    color: #efece6;
+    font-family: var(--font-2);
+    color: var(--color-2);
 }
 
 .support{
@@ -156,8 +161,8 @@ body{
 }
 
 .support a{
-    font-family: Roboto;
-    color: #efece6;
+    font-family: var(--font-2);
+    color: var(--color-2);
 }
 
 @keyframes Appear {
@@ -203,7 +208,7 @@ body{
     .frame-content h1{
     font-size: 2rem;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: var(--color-1);
     } 
 
 }
