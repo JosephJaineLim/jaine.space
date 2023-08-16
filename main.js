@@ -2,8 +2,8 @@
 const APPS = [
     {
         name: 'timeline of aviation',
-        desc: 'explore the captivating evolution of aviation',
-        url: 'file:///C:/Users/Joseph/Desktop/htmls/main/timeline-of-aviation.html',
+        desc: 'explore the captivating evolution of flight',
+        url: 'http://127.0.0.1:8080/timeline-of-aviation.html',
         image: 'photo1.png',
     },
     {
