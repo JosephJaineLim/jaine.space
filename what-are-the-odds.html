@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What are the odds?</title>
+
+    <style>
+        :root{
+            --color-1: #0f0f0f;
+            --color-2: #efece6;
+            --font-1: 'Lato', sans-serif;
+            --font-2: 'Roboto', sans-serif;
+        }
+        body{
+            width: 100%;
+            height: 100svh;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-1);
+        }
+        .app{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .app__header{
+            width: 100%;
+            height: 150px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app__header h1{
+            margin: 0;
+            font-size: 5rem;
+            font-family: var(--font-1);
+            color: var(--color-2);
+        }
+        .app__content{
+            width: 100%;
+            height: 550px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .app__content-body{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .app__content-footer{
+            height: 150px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app__content-footer h1{
+            margin: 0;
+            font-size: 2rem;
+            font-family: var(--font-1);
+            color: var(--color-2);
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="app__header">
+            <h1>What are the odds?</h1>
+        </div>
+        <div class="app__content">
+            <div class="app__content-body">
+                <img src="https://placehold.co/50" alt="left"onclick="NumberDown()">
+                <img src="https://placehold.co/400" alt="na" >
+                <img src="https://placehold.co/50" alt="right" onclick="NumberUp()">
+            </div>
+            <div class="app__content-footer">
+                <h1 id="percentage">100%</h1>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        const myarray = [100,50,30,20,0.11,0.04,0.007,0.0005,0.00007,0.000008];
+        let current = 0;
+        
+
+        const NumberUp = () => {
+            if(current === myarray.length - 1) return
+            current++; 
+
+            let a = myarray[current-1];
+            let b = myarray[current];
+            let c = (a - b) / 100; 
+
+            let d = current;
+
+
+            let i = 0;
+            const interval = setInterval(() => {
+                if (i >= 100) {
+                    clearInterval(interval);
+                    return;
+                }
+                a -= c; 
+                document.getElementById('percentage').innerText = `${a.toFixed(current > 3 ? current-3 : 0)}%`;
+                i++;
+            }, 1);
+        }
+
+        const NumberDown = () => {
+            if(current === 0) return
+            current--;
+
+            let a = myarray[current];
+            let b = myarray[current+1];
+            let c = (a - b) / 100; 
+
+            let i = 0;
+            const interval = setInterval(() => {
+                if (i === 100) {
+                    clearInterval(interval);
+                    return;
+                }
+                b += c; 
+                document.getElementById('percentage').innerText = `${b.toFixed(current > 3 ? current-3 : 0)}%`;
+                i++;
+            }, 1);
+        }
+    </script>
+</body>
+</html>
