@@ -3,13 +3,13 @@ const APPS = [
     {
         name: 'timeline of aviation',
         desc: 'explore the captivating evolution of flight',
-        url: 'http://127.0.0.1:8080/timeline-of-aviation.html',
+        url: 'file:///C:/Users/Joseph/Documents/GitHub/jaine.space/timeline-of-aviation.html',
         image: 'photo1.png',
     },
     {
-        name: '',
-        desc: '',
-        url: '',
+        name: 'what are the odds?',
+        desc: 'things that wont likely happen but still can',
+        url: 'file:///C:/Users/Joseph/Documents/GitHub/jaine.space/what-are-the-odds.html',
         image: 'none',
     },
     {
