@@ -143,6 +143,7 @@ body{
 
 .app__footer h1{
     margin: 0;
+    font-family: var(--font-1);
 }
 
 .app__footer p{
@@ -159,6 +160,7 @@ body{
     position: absolute;
     bottom: 10px;
 }
+
 
 .support a{
     font-family: var(--font-2);
