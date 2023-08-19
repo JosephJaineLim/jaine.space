@@ -10,7 +10,7 @@ const APPS = [
         name: 'what are the odds?',
         desc: 'things that wont likely happen but still can',
         url: 'file:///C:/Users/Joseph/Documents/GitHub/jaine.space/what-are-the-odds.html',
-        image: 'none',
+        image: 'photo2.png',
     },
     {
         name: '',

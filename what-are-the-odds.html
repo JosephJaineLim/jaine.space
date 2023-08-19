@@ -166,29 +166,7 @@
     </style>
 </head>
 <body>
-    <div class="app">
-        <div class="app__header">
-            <h1>What are the odds?</h1>
-        </div>
-        <div class="app__content">
-            <div class="app__content-body">
-                <i class="fa-solid fa-arrow-left" onclick="NumberDown()"></i>
-                <img src="https://media2.giphy.com/media/Y4cMaANkENnOxDEPe6/giphy.gif?cid=ecf05e47qqnvok3mwisms5u39qy0ruozj2src8orv0lnnb8k&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="shark" id="gif">
-                <i class="fa-solid fa-arrow-right" onclick="NumberUp()"></i>
-                <h1 id="percentage">50%</h1>
-            </div>
-            <div class="app__content-footer">
-                <p id="event">winning in a coin flip</p>
-            </div>
-        </div>
-        <div class="app__footer">
-            <h1>Did you learn something?</h1>
-            <p>go to <a href='./index.html'>jaine.space</a> for more</p>
-
-            <div class="support">
-                <p>or you can support my coffee addiction</p><a href="https://www.buymeacoffee.com/josephjainelim">here</a>
-            </div>
-        </div>
+    <div class="app" id="app">
     </div>
     <script>
         const CHANCES = [
@@ -200,8 +178,8 @@
             },
             {
                 event: 'predicting the outcome of a die roll',
-                percentage: 16.67,
-                decimal: 2,
+                percentage: 16.7,
+                decimal: 1,
                 gif: 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWluczQwam11N3QyY3loZmVudXFubmFlMGVsYWo4cDY0NWRlOXVhdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H4uFElBB9Nt7zq3RZ9/giphy.gif'
             },
             {
@@ -259,6 +237,36 @@
                 gif: 'https://media1.giphy.com/media/jfrpOhemvE4Qkxfo8A/giphy.webp?cid=dda24d50339pch17n2au8npwhvolyh0skiw94caau3thhpty&ep=v1_gifs_gifId&rid=giphy.webp&ct=g,'
             }
         ];
+
+        window.addEventListener('load', ()=>{
+            document.getElementById('app').innerHTML = 
+            `<div class="app__header">
+                <h1>What are the odds?</h1>
+            </div>
+            <div class="app__content">
+                <div class="app__content-body">
+                    <i class="fa-solid fa-arrow-left" onclick="NumberDown()"></i>
+                    <img src="${CHANCES[0].gif}" alt="pic" id="gif">
+                    <i class="fa-solid fa-arrow-right" onclick="NumberUp()"></i>
+                    <h1 id="percentage">${CHANCES[0].percentage}%</h1>
+                </div>
+                <div class="app__content-footer">
+                    <p id="event">${CHANCES[0].event}</p>
+                </div>
+            </div>
+            <div class="app__footer">
+                <h1>Did you learn something?</h1>
+                <p>go to <a href='./index.html'>jaine.space</a> for more</p>
+
+                <div class="support">
+                    <a href="https://www.buymeacoffee.com/josephjainelim">support my coffee addiction</a>
+                </div>
+            </div>
+            `
+        })
+
+
+
         
         let current = 0;
         const NumberUp = () => {
