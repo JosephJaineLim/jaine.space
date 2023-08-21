@@ -2,71 +2,125 @@
 const CHANCES = [
     {
         event: 'winning in a coin flip',
-        percentage: 50,
-        decimal: 0,
-        gif: 'https://media2.giphy.com/media/Y4cMaANkENnOxDEPe6/giphy.gif?cid=ecf05e47qqnvok3mwisms5u39qy0ruozj2src8orv0lnnb8k&ep=v1_gifs_search&rid=giphy.gif&ct=g'
-    },
-    {
-        event: 'predicting the outcome of a die roll',
-        percentage: 16.7,
-        decimal: 1,
-        gif: 'https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWluczQwam11N3QyY3loZmVudXFubmFlMGVsYWo4cDY0NWRlOXVhdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H4uFElBB9Nt7zq3RZ9/giphy.gif'
-    },
-    {
-        event: 'falling to your death',
-        percentage: 0.8,
+        percentage: 50.00,
         decimal: 2,
-        gif: 'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHJzZXoxbTFyOTQ1ZTdzcXR1enJzazd0d3d4ZmQwcGNyeXVjeWxuZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/B1FAKSmfWqRA4/giphy.gif'
+        gif: ''
     },
     {
-        event: 'being born with 11 fingers',
-        percentage: 0.2,
-        decimal: 2,
-        gif: 'https://media1.giphy.com/media/148402lxfLRxXa/giphy.gif?cid=ecf05e47cwzf2ammon2o7idz4k22zdyo23qpmvq98rri6247&ep=v1_gifs_search&rid=giphy.gif&ct=g'
-    },
-    {
-        event: 'getting hit by a random bullet',
-        percentage: 0.03,
-        decimal: 3,
-        gif: 'https://media1.giphy.com/media/ZQsizWJ3SOUzImzPkE/giphy.gif?cid=ecf05e47e6wr7a9qviea7etna0ipd7ps3qjl72exkj7jtbbu&ep=v1_gifs_search&rid=giphy.gif&ct=g'
-    },
-    {
-        event: 'being injured by a toilet',
-        percentage: 0.01,
-        decimal: 3,
-        gif: 'https://media3.giphy.com/media/3ohs4qw8hkPShGeanS/giphy.gif?cid=ecf05e472afiblwucftm6ez1wv3w4696uepe40f34cym6mo2&ep=v1_gifs_search&rid=giphy.gif&ct=g'
-    },
-    {
-        event: 'struck by lightning in your lifetime',
-        percentage: 0.007,
+        event: 'die from a random bullet',
+        percentage: 0.012,
         decimal: 4,
-        gif: 'https://media0.giphy.com/media/3o6Mbr42EN2qXR3cis/giphy.gif?cid=ecf05e47z139iuugac68cfcku0ek4cz5daawri7y9at6fq0f&ep=v1_gifs_search&rid=giphy.gif&ct=g'
+        gif: ''
     },
     {
-        event: 'dying in an airplane crash',
-        percentage: 0.0005,
+        event: 'getting injured by a toilet',
+        percentage: 0.010,
+        decimal: 4,
+        gif: ''
+    },
+    {
+        event: 'chance of being murdered this year',
+        percentage: 0.0049,
         decimal: 5,
-        gif: 'https://media1.giphy.com/media/WGqaq4lbMeh1e/giphy.gif?cid=ecf05e47zml3vh3cz2bb42kji9b64lc0u6tra83rl2atsqyu&ep=v1_gifs_search&rid=giphy.gif&ct=g'
+        gif: ''
     },
     {
-        event: 'die from a fireworks',
-        percentage: 0.0003,
+        event: 'find a pearl in an oyster',
+        percentage: 0.0083,
         decimal: 5,
-        gif: 'https://media3.giphy.com/media/4TnV4pzLvM7NAx39oG/giphy.gif?cid=ecf05e47ahg711nabjw1jjozrfa9jv559ax6gxhi31pgp58r&ep=v1_gifs_search&rid=giphy.gif&ct=g'
+        gif: ''
     },
     {
-        event: 'to be a billionaire',
-        percentage: 0.00003,
+        event: 'die from an aircrash',
+        percentage: 0.00048,
         decimal: 6,
-        gif: 'https://media4.giphy.com/media/h0MTqLyvgG0Ss/giphy.gif?cid=ecf05e472p6gbz52mngzcfg270xdbs4wed01qihquei9uoyq&ep=v1_gifs_search&rid=giphy.gif&ct=g'
+        gif: ''
     },
     {
-        event: 'get attacked by a shark',
-        percentage: 0.000009,
+        event: 'get killed by a fireworks',
+        percentage: 0.00029,
+        decimal: 6,
+        gif: ''
+    },
+    {
+        event: 'having a royal flush in poker',
+        percentage: 0.00015,
+        decimal: 6,
+        gif: ''
+    },
+    {
+        event: 'date a supermodel',
+        percentage: 0.00011,
+        decimal: 6,
+        gif: ''
+    },
+    {
+        event: 'get struck by lightning',
+        percentage: 0.00010,
+        decimal: 6,
+        gif: ''
+    },
+    {
+        event: 'become a billionaire',
+        percentage: 0.000030,
         decimal: 7,
-        gif: 'https://media1.giphy.com/media/jfrpOhemvE4Qkxfo8A/giphy.webp?cid=dda24d50339pch17n2au8npwhvolyh0skiw94caau3thhpty&ep=v1_gifs_gifId&rid=giphy.webp&ct=g,'
-    }
-];
+        gif: ''
+    },
+    {
+        event: 'be a movie star',
+        percentage: 0.000067,
+        decimal: 7,
+        gif: ''
+    },
+    {
+        event: 'attacked by a shark',
+        percentage: 0.000086,
+        decimal: 7,
+        gif: ''
+    },
+    {
+        event: 'meeting your partner in a blind date',
+        percentage: 2.89,
+        decimal: 2,
+        gif: ''
+    },
+    {
+        event: 'a person is right-handed',
+        percentage: 90.90,
+        decimal: 2,
+        gif: ''
+    },
+    {
+        event: 'get kissed in your first date',
+        percentage: 52.60,
+        decimal: 2,
+        gif: ''
+    },
+    {
+        event: 'a person is an only child',
+        percentage: 4.78,
+        decimal: 2,
+        gif: ''
+    },
+    {
+        event: 'chance of dying every year',
+        percentage: 0.74,
+        decimal: 3,
+        gif: ''
+    },
+    {
+        event: 'a person is a vegan/vegetarian',
+        percentage: 4.00,
+        decimal: 2,
+        gif: ''
+    },
+    {
+        event: 'die on your birthday',
+        percentage: 14.00,
+        decimal: 2,
+        gif: ''
+    },
+].sort((a,b) => b.percentage - a.percentage);
 
 window.addEventListener('load', ()=>{
     document.getElementById('app').innerHTML = 
@@ -78,7 +132,7 @@ window.addEventListener('load', ()=>{
             <i class="fa-solid fa-arrow-left" onclick="NumberDown()"></i>
             <img src="${CHANCES[0].gif}" alt="pic" id="gif">
             <i class="fa-solid fa-arrow-right" onclick="NumberUp()"></i>
-            <h1 id="percentage">${CHANCES[0].percentage}%</h1>
+            <h1 id="percentage">${CHANCES[0].percentage.toFixed(2)}%</h1>
         </div>
         <div class="app__content-footer">
             <p id="event">${CHANCES[0].event}</p>
