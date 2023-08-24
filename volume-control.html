@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    </style>
+</head>
+<body>
+    <button onclick="Start()">start</button>
+
+    <script>
+        let temp = 0;
+        let isStarted = false;
+        let audio = new Audio('test.mp3')
+
+        const Start = () =>{
+            isStarted = !isStarted;
+        }
+        document.addEventListener('wheel', (e)=>{
+            if(!isStarted) return
+
+
+            if(e.deltaY < 0 && temp > 0){
+                temp -= .01;
+            }else if(e.deltaY > 0){
+                temp += .01;
+            } 
+
+            if(temp > 0 && temp < 1)
+            {
+                audio.volume = temp / 10;
+                audio.play()
+            }
+
+            console.log(temp.toFixed(2))
+        })
+    </script>
+</body>
+</html>
