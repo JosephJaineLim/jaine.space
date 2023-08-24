@@ -8,7 +8,7 @@ const APPS = [
     },
     {
         name: 'what are the odds?',
-        desc: 'things that wont likely happen but still can',
+        desc: 'examine the potential occurrence of an uncommon events',
         url: 'file:///C:/Users/Joseph/Documents/GitHub/jaine.space/what-are-the-odds.html',
         image: 'photo2.png',
     },
