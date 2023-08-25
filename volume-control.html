@@ -14,27 +14,26 @@
     <script>
         let temp = 0;
         let isStarted = false;
-        let audio = new Audio('test.mp3')
+        let audio = new Audio('test.mp3');
+            audio.loop = true;
+            audio.volume = 0;
 
         const Start = () =>{
-            isStarted = !isStarted;
+            isStarted = true;
+            audio.play();
         }
+
         document.addEventListener('wheel', (e)=>{
             if(!isStarted) return
 
 
-            if(e.deltaY < 0 && temp > 0){
+            if(e.deltaY < 0 && temp > .01){
                 temp -= .01;
-            }else if(e.deltaY > 0){
+            }else if(e.deltaY > 0 && temp < .99){
                 temp += .01;
-            } 
-
-            if(temp > 0 && temp < 1)
-            {
-                audio.volume = temp / 10;
-                audio.play()
             }
 
+            audio.volume = temp;
             console.log(temp.toFixed(2))
         })
     </script>
