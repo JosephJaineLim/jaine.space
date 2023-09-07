@@ -17,6 +17,8 @@ let whisper = new Audio('./vc/assets/whisper.wav');
 
 const Start = () =>{
     isStarted = true;
+    //document.getElementById('speaker').src = './vc/assets/speaker.png';
+    document.getElementById('decibel').innerHTML = `0`
     breath.play();
     leaves.play();
     whisper.play();
@@ -46,6 +48,6 @@ document.addEventListener('wheel', (e)=>{
     }
 
 
-    document.getElementById('decibel').innerHTML = `DECIBEL: ${Math.abs(Number(temp * 10).toFixed(2))}`
+    document.getElementById('decibel').innerHTML = `${Math.abs(Number(temp * 10).toFixed(0))}`
     console.log(temp.toFixed(2))
 })
